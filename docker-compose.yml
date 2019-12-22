@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  ansible:
+    container_name: ansible
+    build: docker/ansible
+    tty: true
+    working_dir: '/var/data'
+    volumes:
+      -  .:/var/data
+  target1:
+    container_name: target1
+    build: docker/target
+    tty: true
+  target2:
+    container_name: target2
+    build: docker/target
+    tty: true
+
