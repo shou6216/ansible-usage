@@ -7,6 +7,7 @@ services:
     working_dir: '/var/data'
     volumes:
       -  .:/var/data
+      -  ./cfg/ansible.cfg:/etc/ansible/ansible.cfg
   target1:
     container_name: target1
     build: docker/target
@@ -15,4 +16,33 @@ services:
     container_name: target2
     build: docker/target
     tty: true
+  target3:
+    container_name: target3
+    build: docker/target
+    tty: true
+  target4:
+    container_name: target4
+    build: docker/target
+    tty: true
+  target5:
+    container_name: target5
+    build: docker/target
+    tty: true
+  target6:
+    container_name: target6
+    build: docker/target
+    tty: true
+  target7:
+    container_name: target7
+    build: docker/target
+    tty: true
+  target8:
+    container_name: target8
+    build: docker/target
+    tty: true
+
+
+
+
+
 
