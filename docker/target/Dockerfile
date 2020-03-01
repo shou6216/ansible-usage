@@ -1,4 +1,4 @@
-FROM amazonlinux:latest
+FROM centos:7
 
 RUN yum -y install openssh-server sudo vim \\
     selinux-policy-targeted policycoreutils-python

@@ -3,7 +3,7 @@
   selinux:
     policy: targeted
     state: permissive
-  when: ansible_selinux == true
+  when: ansible_selinux == 'enforcing'
 
 - name: configure / Update yum packages
   yum:
