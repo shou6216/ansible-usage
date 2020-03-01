@@ -1,0 +1,26 @@
+---
+- name: Deploy Database for WordPress
+  hosts: databases
+  become: true
+  roles:
+    - { role: common, tags: common}
+    - { role: mariadb, tags: mariadb}
+    - { role: haproxy, culster_service: db_cluster, tags: haproxy}
+    - { role: keepalived, cluster_service: db_cluster, tags: keepalived}
+
+- name: Delploy Application for WordPress
+  hosts: apps
+  become: true
+  roles:
+   - { role: common, tags: common}
+   - { role: nginx, tags: nginx}
+   - { role: php-fpm, tags: php-fpm}
+   - { role: wordpress, tags: wordpress}
+
+- name: Deploy LoadBalancer for WordPress
+  hosts: lbs
+  become: true
+  roles:
+    - { role: common, tags: common}
+    - { role: haproxy, cluster_service: app_cluster, tags: haproxy}
+    - { role: keepalived, cluster_service: app_cluster, tags: keepalived}
