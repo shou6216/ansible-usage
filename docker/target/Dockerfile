@@ -13,5 +13,5 @@ RUN useradd ansible
 
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/usr/sbin/init"]
 

@@ -32,14 +32,17 @@ services:
     container_name: target6
     build: docker/target
     tty: true
+    privileged: true
   target7:
     container_name: target7
     build: docker/target
     tty: true
+    privileged: true
   target8:
     container_name: target8
     build: docker/target
     tty: true
+    privileged: true
 
 
 

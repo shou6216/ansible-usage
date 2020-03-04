@@ -1,0 +1,6 @@
+---
+- name: check_install / Remove necessary packages
+  yum:
+    name: mariadb-libs
+    state: absent
+

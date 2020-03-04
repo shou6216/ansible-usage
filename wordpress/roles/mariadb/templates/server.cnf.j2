@@ -1,0 +1,19 @@
+[galera]
+wsrep_provider=/usr/lib64/galera/libgalera_smm.so
+wsrep_cluster_address="gcomm://
+{%- for host in groups['databases'] -%}
+{{ hostvars[host] }}
+{%- if not loop.last %},{% endif -%}
+{%- endfor -%}"
+binlog_format=row
+default_storage_engine=InnoDB
+innodb_autoinc_lock_mode=2
+innodb_locks_unsafe_for_binlog=1
+bind-address={{ inventory_hostname }}
+wsrep_cluster_name="MariaDB_cluster"
+wsrep_node_name="{{ ansible_hostname }}"
+wsrep_node_address={{ inventory_hostname }}
+wsrep_sst_method=rsync
+wsrep_sst_auth={{ mariadb_sst_user }}:{{ mariadb_sst_pass }}
+wsrep_on=ON
+
