@@ -23,7 +23,7 @@
 
   - name: configure / Wait for bootstrapping first MariaDB
     wait_for:
-      host: "{{ inventory_hostname }}"
+      host: "{{ ansible_default_ipv4.address }}"
       port: 3306
       delay: 5
       timeout: 60

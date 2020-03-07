@@ -38,11 +38,6 @@ services:
     build: docker/target
     tty: true
     privileged: true
-  target8:
-    container_name: target8
-    build: docker/target
-    tty: true
-    privileged: true
 
 
 
