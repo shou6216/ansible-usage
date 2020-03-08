@@ -49,7 +49,6 @@
       host: "{{ansible_default_ipv4.network }}/{{ ansible_default_ipv4.netmask }}"
       priv: "*.*:RELOAD,LOCK TABLES,REPLICATION CLIENT"
       append_privs: yes
-      no_log: true
   
   run_once: true
 

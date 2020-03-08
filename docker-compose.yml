@@ -38,17 +38,11 @@ services:
     build: docker/target
     tty: true
     privileged: true
-    ports:
-     - "22"
-     - "3306"
   target7:
     container_name: target7
     build: docker/target
     tty: true
     privileged: true
-    ports:
-     - "22"
-     - "3306"
 
 
 
