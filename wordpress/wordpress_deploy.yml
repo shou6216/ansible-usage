@@ -5,7 +5,7 @@
   roles:
     - { role: common, tags: common}
     - { role: mariadb, tags: mariadb}
-    - { role: haproxy, culster_service: db_cluster, tags: haproxy}
+    - { role: haproxy, cluster_service: db_cluster, tags: haproxy}
     - { role: keepalived, cluster_service: db_cluster, tags: keepalived}
 
 - name: Delploy Application for WordPress

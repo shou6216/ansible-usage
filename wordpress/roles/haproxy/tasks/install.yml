@@ -1,0 +1,6 @@
+---
+- name: install / Install required packages
+  yum:
+    name: "{{ haproxy_packages }}"
+    state: latest
+

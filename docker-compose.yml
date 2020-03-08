@@ -38,6 +38,8 @@ services:
     build: docker/target
     tty: true
     privileged: true
+    ports:
+      - "10080:10080"
   target7:
     container_name: target7
     build: docker/target
