@@ -1,7 +1,6 @@
 FROM centos:7
 
-RUN yum -y install openssh-server sudo vim \\
-    selinux-policy-targeted policycoreutils-python
+RUN yum -y install openssh-server sudo vim
 
 RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
 RUN ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key -N '' -t ecdsa
