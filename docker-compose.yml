@@ -13,11 +13,6 @@ services:
     build: docker/target
     tty: true
     privileged: true
-  target2:
-    container_name: target2
-    build: docker/target
-    tty: true
-    privileged: true
   target3:
     container_name: target3
     build: docker/target
@@ -28,27 +23,14 @@ services:
     build: docker/target
     tty: true
     privileged: true
-  target5:
-    container_name: target5
-    build: docker/target
-    tty: true
-    privileged: true
   target6:
     container_name: target6
     build: docker/target
     tty: true
     privileged: true
-    ports:
-      - "10080:10080"
   target7:
     container_name: target7
     build: docker/target
     tty: true
     privileged: true
-
-
-
-
-
-
 
