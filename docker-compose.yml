@@ -13,13 +13,8 @@ services:
     build: docker/target
     tty: true
     privileged: true
-  target3:
-    container_name: target3
-    build: docker/target
-    tty: true
-    privileged: true
-  target4:
-    container_name: target4
+  target2:
+    container_name: target2
     build: docker/target
     tty: true
     privileged: true
