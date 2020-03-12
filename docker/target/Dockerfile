@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum -y install openssh-server sudo vim
+RUN yum -y install openssh-server sudo vim iproute
 
 RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
 RUN ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key -N '' -t ecdsa
